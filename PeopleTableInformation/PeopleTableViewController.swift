@@ -43,7 +43,7 @@ class PeopleTableViewController: UITableViewController {
         personData = peopleData.getPerson(index: indexPath.row)
         cell.textLabel?.text = personData.name
         cell.detailTextLabel?.text = personData.phone
-        
+        print(personData.name)
         cell.imageView?.image = UIImage(named: personData.image)
         
         return cell
