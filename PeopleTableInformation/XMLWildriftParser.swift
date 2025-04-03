@@ -1,8 +1,8 @@
 //
 //  XMLPeopleParser.swift
-//  PeopleTableInformation
+//  WildriftTableInformation
 //
-//  Created by Dorin on 29.03.2025.
+//  Created by Bors Dorin on 01.04.2025.
 //
 
 import Foundation
