@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <wildrift>
+        <champion>
+            <name>Ahri</name>
+            <position>Mid</position>
+            <ultimate>Spirit rush</ultimate>
+            <role>Mage/Assassin</role>
+            <image>Ahri.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/ahri/</url>
+        </champion>
+        <champion>
+            <name>Akali</name>
+            <position>Mid/Solo</position>
+            <ultimate>Perfect execution</ultimate>
+            <role>Assassin</role>
+            <image>Akali.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/akali/</url>
+        </champion>
+        <champion>
+            <name>Ambessa</name>
+            <position>Solo/Jungle</position>
+            <ultimate>Public execution</ultimate>
+            <role>Fighter/Assassin</role>
+            <image>Ambessa.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/ambessa/</url>
+        </champion>
+        <champion>
+            <name>Ashe</name>
+            <position>Duo/Support</position>
+            <ultimate>Enchanted crystal arrow</ultimate>
+            <role>Marksman/Support</role>
+            <image>Ashe.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/ashe/</url>
+        </champion>
+    </wildrift>

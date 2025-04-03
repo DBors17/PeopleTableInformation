@@ -12,44 +12,44 @@ class ViewController: UIViewController{
     @IBAction func moreInfoAction(_ sender: Any){
     }
     
-    @IBOutlet weak var personImageView: UIImageView!
+    @IBOutlet weak var championImageView: UIImageView!
     
-    @IBOutlet weak var personLabel: UILabel!
+    @IBOutlet weak var championLabel: UILabel!
     
     func update(){
-        personLabel.text = personData.name
+        championLabel.text = championData.name
         
         //populate outlets with data
-        personImageView.image = UIImage(named: personData.image)
+        championImageView.image = UIImage(named: championData.image)
     }
     
     //MARK: -model vars
-    var personData : Person!
+    var championData : Champion!
     
-    var personIndex = 0
+    var championIndex = 0
     
-    var peopleData : People!
+    var wildriftData : Wildrift!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // get model data
-        peopleData = People(name : "people.xml")
+        wildriftData = Wildrift(name : "champions.xml")
         
         //personData = personData.getPerson(index: personIndex)
         
-        personLabel.text = personData.name
+        championLabel.text = championData.name
         
         //populate outlets with data
-        personImageView.image = UIImage(named: personData.image)
+        championImageView.image = UIImage(named: championData.image)
         
-        self.title = "Person"
+        self.title = "Champion"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "seque1"{
             let destController = segue.destination as! DetailsViewController
             
-            destController.personData = self.personData
+            destController.championData = self.championData
         }
     }
     

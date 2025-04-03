@@ -7,19 +7,19 @@
 
 import UIKit
 
-class PeopleTableViewController: UITableViewController {
+class WildriftTableViewController: UITableViewController {
     
     
     //MARK: - model date
-    var peopleData: People!
-    var personData: Person!
+    var wildriftData: Wildrift!
+    var championData: Champion!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // make table data
-        peopleData = People(name: "people.xml")
-        self.title = "People"
+        wildriftData = Wildrift(name: "champions.xml")
+        self.title = "Wildrift"
         
         }
 
@@ -32,7 +32,7 @@ class PeopleTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return peopleData.getCount()
+        return wildriftData.getCount()
     }
 
     
@@ -40,11 +40,11 @@ class PeopleTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         // Configer the cell...
-        personData = peopleData.getPerson(index: indexPath.row)
-        cell.textLabel?.text = personData.name
-        cell.detailTextLabel?.text = personData.phone
-        print(personData.name)
-        cell.imageView?.image = UIImage(named: personData.image)
+        championData = wildriftData.getChampion(index: indexPath.row)
+        cell.textLabel?.text = championData.name
+        cell.detailTextLabel?.text = championData.position
+        print(championData.name)
+        cell.imageView?.image = UIImage(named: championData.image)
         
         return cell
     }
@@ -94,9 +94,9 @@ class PeopleTableViewController: UITableViewController {
             let destController = segue.destination as! ViewController
             //get index path from sender
             let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
-            personData = peopleData.getPerson(index: indexPath!.row)
+            championData = wildriftData.getChampion(index: indexPath!.row)
             
-            destController.personData = self.personData
+            destController.championData = self.championData
             
         }
     }

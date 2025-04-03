@@ -12,14 +12,14 @@
 		20680E2A2D89DDFD0048C177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20680E282D89DDFD0048C177 /* Main.storyboard */; };
 		20680E2C2D89DE000048C177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20680E2B2D89DE000048C177 /* Assets.xcassets */; };
 		20680E2F2D89DE000048C177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20680E2D2D89DE000048C177 /* LaunchScreen.storyboard */; };
-		20680E372D89DE6B0048C177 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20680E362D89DE6B0048C177 /* PeopleTableViewController.swift */; };
+		20680E372D89DE6B0048C177 /* WildriftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20680E362D89DE6B0048C177 /* WildriftTableViewController.swift */; };
 		20680E3D2D89DFA20048C177 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20680E3C2D89DFA20048C177 /* image.jpg */; };
-		5230FCD72D9839FF005AA553 /* XMLPeopleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230FCD62D9839FF005AA553 /* XMLPeopleParser.swift */; };
-		526150212D9825F2008DA3C1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150202D9825F2008DA3C1 /* Person.swift */; };
-		526150232D98260F008DA3C1 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150222D98260F008DA3C1 /* People.swift */; };
+		5230FCD72D9839FF005AA553 /* XMLWildriftParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230FCD62D9839FF005AA553 /* XMLWildriftParser.swift */; };
+		526150212D9825F2008DA3C1 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150202D9825F2008DA3C1 /* Champion.swift */; };
+		526150232D98260F008DA3C1 /* Wildrift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150222D98260F008DA3C1 /* Wildrift.swift */; };
 		526150252D98267E008DA3C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150242D98267E008DA3C1 /* ViewController.swift */; };
 		526150272D982695008DA3C1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150262D982695008DA3C1 /* DetailsViewController.swift */; };
-		526D14622D98389900BACC5D /* people.xml in Resources */ = {isa = PBXBuildFile; fileRef = 526D14612D98389900BACC5D /* people.xml */; };
+		526D14622D98389900BACC5D /* champions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 526D14612D98389900BACC5D /* champions.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +30,14 @@
 		20680E2B2D89DE000048C177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20680E2E2D89DE000048C177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20680E302D89DE000048C177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20680E362D89DE6B0048C177 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		20680E362D89DE6B0048C177 /* WildriftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildriftTableViewController.swift; sourceTree = "<group>"; };
 		20680E3C2D89DFA20048C177 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpg; path = ../../../Downloads/image.jpg; sourceTree = "<group>"; };
-		5230FCD62D9839FF005AA553 /* XMLPeopleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLPeopleParser.swift; sourceTree = "<group>"; };
-		526150202D9825F2008DA3C1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		526150222D98260F008DA3C1 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		5230FCD62D9839FF005AA553 /* XMLWildriftParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLWildriftParser.swift; sourceTree = "<group>"; };
+		526150202D9825F2008DA3C1 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		526150222D98260F008DA3C1 /* Wildrift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wildrift.swift; sourceTree = "<group>"; };
 		526150242D98267E008DA3C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		526150262D982695008DA3C1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		526D14612D98389900BACC5D /* people.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = people.xml; sourceTree = SOURCE_ROOT; };
+		526D14612D98389900BACC5D /* champions.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = champions.xml; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,20 +70,20 @@
 		20680E212D89DDFD0048C177 /* PeopleTableInformation */ = {
 			isa = PBXGroup;
 			children = (
-				526D14612D98389900BACC5D /* people.xml */,
+				526D14612D98389900BACC5D /* champions.xml */,
 				20680E222D89DDFD0048C177 /* AppDelegate.swift */,
 				20680E242D89DDFD0048C177 /* SceneDelegate.swift */,
 				20680E282D89DDFD0048C177 /* Main.storyboard */,
 				20680E2B2D89DE000048C177 /* Assets.xcassets */,
+				20680E3C2D89DFA20048C177 /* image.jpg */,
 				20680E2D2D89DE000048C177 /* LaunchScreen.storyboard */,
 				20680E302D89DE000048C177 /* Info.plist */,
-				20680E362D89DE6B0048C177 /* PeopleTableViewController.swift */,
-				20680E3C2D89DFA20048C177 /* image.jpg */,
-				526150222D98260F008DA3C1 /* People.swift */,
-				526150202D9825F2008DA3C1 /* Person.swift */,
+				20680E362D89DE6B0048C177 /* WildriftTableViewController.swift */,
+				526150222D98260F008DA3C1 /* Wildrift.swift */,
+				526150202D9825F2008DA3C1 /* Champion.swift */,
 				526150242D98267E008DA3C1 /* ViewController.swift */,
 				526150262D982695008DA3C1 /* DetailsViewController.swift */,
-				5230FCD62D9839FF005AA553 /* XMLPeopleParser.swift */,
+				5230FCD62D9839FF005AA553 /* XMLWildriftParser.swift */,
 			);
 			path = PeopleTableInformation;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 				20680E2C2D89DE000048C177 /* Assets.xcassets in Resources */,
 				20680E2A2D89DDFD0048C177 /* Main.storyboard in Resources */,
 				20680E3D2D89DFA20048C177 /* image.jpg in Resources */,
-				526D14622D98389900BACC5D /* people.xml in Resources */,
+				526D14622D98389900BACC5D /* champions.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,13 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				526150252D98267E008DA3C1 /* ViewController.swift in Sources */,
-				526150212D9825F2008DA3C1 /* Person.swift in Sources */,
+				526150212D9825F2008DA3C1 /* Champion.swift in Sources */,
 				20680E232D89DDFD0048C177 /* AppDelegate.swift in Sources */,
-				5230FCD72D9839FF005AA553 /* XMLPeopleParser.swift in Sources */,
-				20680E372D89DE6B0048C177 /* PeopleTableViewController.swift in Sources */,
+				5230FCD72D9839FF005AA553 /* XMLWildriftParser.swift in Sources */,
+				20680E372D89DE6B0048C177 /* WildriftTableViewController.swift in Sources */,
 				526150272D982695008DA3C1 /* DetailsViewController.swift in Sources */,
 				20680E252D89DDFD0048C177 /* SceneDelegate.swift in Sources */,
-				526150232D98260F008DA3C1 /* People.swift in Sources */,
+				526150232D98260F008DA3C1 /* Wildrift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

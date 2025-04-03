@@ -7,7 +7,7 @@
 
 import Foundation
 
-class XMLPeopleParser: NSObject, XMLParserDelegate{
+class XMLWildriftParser: NSObject, XMLParserDelegate{
     var name:String
     
     init(name:String){
@@ -16,17 +16,17 @@ class XMLPeopleParser: NSObject, XMLParserDelegate{
     
     //MARK: --var declaration
     
-    var pName, pPhone, pEmail, pImage, pUrl : String!
+    var pName, pPosition, pUltimate, pRole, pImage, pUrl : String!
     
     var passData   = false
     var passElement = -1
     
-    var personData : Person!
-    var peopleData = [Person]()
+    var championData : Champion!
+    var wildriftData = [Champion]()
     
     var parser : XMLParser!
     
-    var tags  = ["name", "phone", "email", "image", "url"]
+    var tags  = ["name", "position", "ultimate", "role", "image", "url"]
     
     //MARK: -- parser delegate methods
     
@@ -36,10 +36,11 @@ class XMLPeopleParser: NSObject, XMLParserDelegate{
         if passData{
             switch passElement{
             case 0 : pName = string
-            case 1 : pPhone = string
-            case 2 : pEmail = string
-            case 3 : pImage = string
-            case 4 : pUrl = string
+            case 1 : pPosition = string
+            case 2 : pUltimate = string
+            case 3 : pRole = string
+            case 4 : pImage = string
+            case 5 : pUrl = string
             default : break
             }
         }
@@ -64,9 +65,9 @@ class XMLPeopleParser: NSObject, XMLParserDelegate{
             passElement = -1
         }
         
-        if elementName == "person"{
-           personData = Person(name: pName, phone: pPhone, email: pEmail, image: pImage, url: pUrl)
-            peopleData.append(personData)
+        if elementName == "champion"{
+            championData = Champion(name: pName, position: pPosition, ultimate: pUltimate, role: pRole, image: pImage, url: pUrl)
+            wildriftData.append(championData)
         }
     }
     
