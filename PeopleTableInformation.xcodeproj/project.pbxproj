@@ -13,7 +13,6 @@
 		20680E2C2D89DE000048C177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20680E2B2D89DE000048C177 /* Assets.xcassets */; };
 		20680E2F2D89DE000048C177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20680E2D2D89DE000048C177 /* LaunchScreen.storyboard */; };
 		20680E372D89DE6B0048C177 /* WildriftTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20680E362D89DE6B0048C177 /* WildriftTableViewController.swift */; };
-		20680E3D2D89DFA20048C177 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20680E3C2D89DFA20048C177 /* image.jpg */; };
 		5230FCD72D9839FF005AA553 /* XMLWildriftParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230FCD62D9839FF005AA553 /* XMLWildriftParser.swift */; };
 		526150212D9825F2008DA3C1 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150202D9825F2008DA3C1 /* Champion.swift */; };
 		526150232D98260F008DA3C1 /* Wildrift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150222D98260F008DA3C1 /* Wildrift.swift */; };
@@ -31,7 +30,6 @@
 		20680E2E2D89DE000048C177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20680E302D89DE000048C177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20680E362D89DE6B0048C177 /* WildriftTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildriftTableViewController.swift; sourceTree = "<group>"; };
-		20680E3C2D89DFA20048C177 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image.jpg; path = ../../../Downloads/image.jpg; sourceTree = "<group>"; };
 		5230FCD62D9839FF005AA553 /* XMLWildriftParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLWildriftParser.swift; sourceTree = "<group>"; };
 		526150202D9825F2008DA3C1 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		526150222D98260F008DA3C1 /* Wildrift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wildrift.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				20680E242D89DDFD0048C177 /* SceneDelegate.swift */,
 				20680E282D89DDFD0048C177 /* Main.storyboard */,
 				20680E2B2D89DE000048C177 /* Assets.xcassets */,
-				20680E3C2D89DFA20048C177 /* image.jpg */,
 				20680E2D2D89DE000048C177 /* LaunchScreen.storyboard */,
 				20680E302D89DE000048C177 /* Info.plist */,
 				20680E362D89DE6B0048C177 /* WildriftTableViewController.swift */,
@@ -149,7 +146,6 @@
 				20680E2F2D89DE000048C177 /* LaunchScreen.storyboard in Resources */,
 				20680E2C2D89DE000048C177 /* Assets.xcassets in Resources */,
 				20680E2A2D89DDFD0048C177 /* Main.storyboard in Resources */,
-				20680E3D2D89DFA20048C177 /* image.jpg in Resources */,
 				526D14622D98389900BACC5D /* champions.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

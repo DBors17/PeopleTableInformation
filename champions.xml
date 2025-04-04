@@ -32,4 +32,124 @@
             <image>Ashe.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/ashe/</url>
         </champion>
+        <champion>
+            <name>Brand</name>
+            <position>Mid/Support</position>
+            <ultimate>Pyroclasm</ultimate>
+            <role>Mage</role>
+            <image>Brand.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/brand/</url>
+        </champion>
+        <champion>
+            <name>Braum</name>
+            <position>Support</position>
+            <ultimate>Glacial fissure</ultimate>
+            <role>Support/Tank</role>
+            <image>Braum.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/braum/</url>
+        </champion>
+        <champion>
+            <name>Fiora</name>
+            <position>Solo</position>
+            <ultimate>Grand challenge</ultimate>
+            <role>Fighter/Assassin</role>
+            <image>Fiora.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/fiora/</url>
+        </champion>
+        <champion>
+            <name>Garen</name>
+            <position>Jungle/Solo</position>
+            <ultimate>Demacian justice</ultimate>
+            <role>Fighter/Tank</role>
+            <image>Garen.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/garen/</url>
+        </champion>
+        <champion>
+            <name>Heimerdinger</name>
+            <position>Mid/Support</position>
+            <ultimate>Upgrade</ultimate>
+            <role>Mage/Support</role>
+            <image>Heimerdinger.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/heimerdinger/</url>
+        </champion>
+        <champion>
+            <name>Irelia</name>
+            <position>Mid/Solo</position>
+            <ultimate>Vanguard's Edge</ultimate>
+            <role>Fighter/Assassin</role>
+            <image>Irelia.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/irelia/</url>
+        </champion>
+        <champion>
+            <name>Milio</name>
+            <position>Support</position>
+            <ultimate>Breath of life</ultimate>
+            <role>Support/Mage</role>
+            <image>Milio.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/milio/</url>
+        </champion>
+        <champion>
+            <name>Riven</name>
+            <position>Solo/Jungle</position>
+            <ultimate>Blade of the exile</ultimate>
+            <role>Fighter/Assassin</role>
+            <image>Riven.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/riven/</url>
+        </champion>
+        <champion>
+            <name>Seraphine</name>
+            <position>Support/Mid</position>
+            <ultimate>Encore</ultimate>
+            <role>Mage/Support</role>
+            <image>Seraphine.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/seraphine/</url>
+        </champion>
+        <champion>
+            <name>Sivir</name>
+            <position>Duo</position>
+            <ultimate>On the hunt</ultimate>
+            <role>Marksman</role>
+            <image>Sivir.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/sivir/</url>
+        </champion>
+        <champion>
+            <name>Vi</name>
+            <position>Jungle/Solo</position>
+            <ultimate>Assault and battery</ultimate>
+            <role>Fighter</role>
+            <image>Vi.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/vi/</url>
+        </champion>
+        <champion>
+            <name>Viktor</name>
+            <position>Mid</position>
+            <ultimate>Arcane storm</ultimate>
+            <role>Mage</role>
+            <image>Viktor.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/viktor/</url>
+        </champion>
+        <champion>
+            <name>Wukong</name>
+            <position>Jungle/Solo</position>
+            <ultimate>Cyclone</ultimate>
+            <role>Fighter/Tank</role>
+            <image>Wukong.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/wukong/</url>
+        </champion>
+        <champion>
+            <name>Xin Zhao</name>
+            <position>Jungle/Solo</position>
+            <ultimate>Crescent guard</ultimate>
+            <role>Fighter/Tank</role>
+            <image>Xin-Zhao.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/xin-zhao/</url>
+        </champion>
+        <champion>
+            <name>Zyra</name>
+            <position>Support/Mid</position>
+            <ultimate>Stranglethorns</ultimate>
+            <role>Mage</role>
+            <image>Zyra.jpg</image>
+            <url>https://wildrift.leagueoflegends.com/en-us/champions/zyra/</url>
+        </champion>
     </wildrift>
