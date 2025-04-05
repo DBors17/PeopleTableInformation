@@ -19,6 +19,7 @@
 		526150252D98267E008DA3C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150242D98267E008DA3C1 /* ViewController.swift */; };
 		526150272D982695008DA3C1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150262D982695008DA3C1 /* DetailsViewController.swift */; };
 		526D14622D98389900BACC5D /* champions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 526D14612D98389900BACC5D /* champions.xml */; };
+		5279CA422DA160660092031E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279CA412DA160660092031E /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		526150242D98267E008DA3C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		526150262D982695008DA3C1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		526D14612D98389900BACC5D /* champions.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = champions.xml; sourceTree = SOURCE_ROOT; };
+		5279CA412DA160660092031E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				20680E282D89DDFD0048C177 /* Main.storyboard */,
 				20680E2B2D89DE000048C177 /* Assets.xcassets */,
 				20680E2D2D89DE000048C177 /* LaunchScreen.storyboard */,
+				5279CA412DA160660092031E /* WebViewController.swift */,
 				20680E302D89DE000048C177 /* Info.plist */,
 				20680E362D89DE6B0048C177 /* WildriftTableViewController.swift */,
 				526150222D98260F008DA3C1 /* Wildrift.swift */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				526150252D98267E008DA3C1 /* ViewController.swift in Sources */,
+				5279CA422DA160660092031E /* WebViewController.swift in Sources */,
 				526150212D9825F2008DA3C1 /* Champion.swift in Sources */,
 				20680E232D89DDFD0048C177 /* AppDelegate.swift in Sources */,
 				5230FCD72D9839FF005AA553 /* XMLWildriftParser.swift in Sources */,
