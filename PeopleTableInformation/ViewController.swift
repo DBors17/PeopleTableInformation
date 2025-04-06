@@ -43,11 +43,9 @@ class ViewController: UIViewController{
         // get model data
         wildriftData = Wildrift(name : "champions.xml")
         
-        
+        //populate outlets with data
         championLabel.text = championData.name
         championRoleLabel.text = championData.role
-        
-        //populate outlets with data
         championImageView.image = UIImage(named: championData.image)
         
         if femaleChampions.contains(championData.name){

@@ -19,16 +19,30 @@ class DetailsViewController: UIViewController {
     // MARK: - Data
     var championData : Champion!
     
+    let femaleChampions = ["Ashe", "Ahri","Ambessa", "Akali", "Fiora", "Irelia" , "Seraphine" ,"Riven", "Sivir" , "Vi" , "Zyra"]
+    let maleChampions = ["Brand", "Braum", "Garen", "Heimerdinger" , "Milio", "Viktor", "Wukong" , "Xin Zhao"]
+    
+    let lightPink = UIColor(red: 1.0, green: 0.8, blue: 0.9, alpha: 1.0)
+    let lightBlue = UIColor(red: 0.7, green: 0.85, blue: 1.0, alpha: 1.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         nameLabel.text = championData.name
-        positionLabel.text = championData.position
-        ultimateLabel.text = championData.ultimate
-        roleLabel.text = championData.role
-        imageLabel.text = championData.image
-        urlLabel.text = championData.url
+        positionLabel.text = "Position: "+championData.position
+        ultimateLabel.text = "Ultimate: "+championData.ultimate
+        roleLabel.text = "Role: "+championData.role
+        imageLabel.text = "Image: "+championData.image
+        urlLabel.text = "Click to see web page!"
+        
+        if femaleChampions.contains(championData.name){
+            view.backgroundColor = lightPink
+        }else if maleChampions.contains(championData.name){
+            view.backgroundColor = lightBlue
+        }else{
+            view.backgroundColor = UIColor.systemGray6
+        }
     
         self.title = "Details"
         
