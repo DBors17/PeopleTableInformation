@@ -14,6 +14,8 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var championImageView: UIImageView!
     
+    @IBOutlet weak var championRoleLabel: UILabel!
+    
     @IBOutlet weak var championLabel: UILabel!
     
     func update(){
@@ -38,6 +40,7 @@ class ViewController: UIViewController{
         //personData = personData.getPerson(index: personIndex)
         
         championLabel.text = championData.name
+        championRoleLabel.text = championData.role
         
         //populate outlets with data
         championImageView.image = UIImage(named: championData.image)

@@ -41,7 +41,7 @@ class DetailsViewController: UIViewController {
     @objc func openWebPage(){
         let urlString = championData.url
         
-        let storyboard = UIStoryboard(name: "WebView", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let webVC = storyboard.instantiateViewController(withIdentifier: "WebViewController") as? WebViewController{
         webVC.urlString = urlString
         navigationController?.pushViewController(webVC, animated: true)
