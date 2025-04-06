@@ -7,12 +7,17 @@
 
 import UIKit
 
-class WildriftTableViewController: UITableViewController {
+class WildriftTableViewController: UITableViewController, UISearchResultsUpdating {
     
     
     //MARK: - model date
     var wildriftData: Wildrift!
     var championData: Champion!
+    
+    var filteredChampions: [Champion] = []
+    var isSearching = false
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,15 @@ class WildriftTableViewController: UITableViewController {
         // make table data
         wildriftData = Wildrift(name: "champions.xml")
         self.title = "Wildrift"
+        
+        // setup search controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search champion..."
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        filteredChampions = wildriftData.wildriftData
         
         }
 
@@ -31,8 +45,7 @@ class WildriftTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return wildriftData.getCount()
+        return isSearching ? filteredChampions.count: wildriftData.getCount()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -55,12 +68,13 @@ class WildriftTableViewController: UITableViewController {
             return UITableViewCell()
         }
         
+        let currentChampion = isSearching ? filteredChampions[indexPath.row] : wildriftData.getChampion(index: indexPath.row)
         // Configer the cell...
-        championData = wildriftData.getChampion(index: indexPath.row)
+        //championData = wildriftData.getChampion(index: indexPath.row)
         
-        cell.cellChampionNameLabel?.text = championData.name
-        cell.cellChampionDetailsLabel?.text = championData.position
-        cell.cellChampionImage?.image = UIImage(named: championData.image)
+        cell.cellChampionNameLabel?.text = currentChampion.name
+        cell.cellChampionDetailsLabel?.text = currentChampion.position
+        cell.cellChampionImage?.image = UIImage(named: currentChampion.image)
         
         cell.contentView.layer.cornerRadius = 11
         cell.contentView.layer.shadowColor = UIColor.black.cgColor
@@ -76,6 +90,21 @@ class WildriftTableViewController: UITableViewController {
         }
         return cell
     }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text?.lowercased() else { return }
+        
+        if searchText.isEmpty{
+            isSearching = false
+        } else {
+            isSearching = true
+            filteredChampions = wildriftData.wildriftData.filter{
+                $0.name.lowercased().contains(searchText) || $0.position.lowercased().contains(searchText)
+            }
+        }
+        
+        tableView.reloadData()
+    }
 
     // MARK: - Navigation
 
@@ -86,7 +115,7 @@ class WildriftTableViewController: UITableViewController {
             let destController = segue.destination as! ViewController
             //get index path from sender
             let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
-            championData = wildriftData.getChampion(index: indexPath!.row)
+            championData = isSearching ? filteredChampions[indexPath!.row] : wildriftData.getChampion(index: indexPath!.row)
             
             destController.championData = self.championData
             
