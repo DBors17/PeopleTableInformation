@@ -34,56 +34,44 @@ class WildriftTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return wildriftData.getCount()
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let spacer = UIView()
+        spacer.backgroundColor = .clear
+        return spacer
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell else {
+            return UITableViewCell()
+        }
         
         // Configer the cell...
         championData = wildriftData.getChampion(index: indexPath.row)
-        cell.textLabel?.text = championData.name
-        cell.detailTextLabel?.text = championData.position
-        print(championData.name)
-        cell.imageView?.image = UIImage(named: championData.image)
+        
+        cell.cellChampionNameLabel?.text = championData.name
+        cell.cellChampionDetailsLabel?.text = championData.position
+        cell.cellChampionImage?.image = UIImage(named: championData.image)
+        
+        cell.contentView.layer.cornerRadius = 11
+        cell.contentView.layer.shadowColor = UIColor.black.cgColor
+        cell.contentView.layer.shadowOpacity = 0.1
+        cell.contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        cell.contentView.layer.shadowRadius = 3
+        cell.contentView.layer.masksToBounds = true
+        cell.contentView.backgroundColor = UIColor.systemGray6
         
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     // MARK: - Navigation
 
