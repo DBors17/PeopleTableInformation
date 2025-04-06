@@ -8,7 +8,9 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    
     // MARK: - Outlets
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var ultimateLabel: UILabel!
@@ -16,7 +18,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var imageLabel: UILabel!
     @IBOutlet weak var urlLabel: UILabel!
     
-    // MARK: - Data
+    // MARK: - Data and style elements
     var championData : Champion!
     
     let femaleChampions = ["Ashe", "Ahri","Ambessa", "Akali", "Fiora", "Irelia" , "Seraphine" ,"Riven", "Sivir" , "Vi" , "Zyra"]
@@ -30,16 +32,58 @@ class DetailsViewController: UIViewController {
         
         
         nameLabel.text = championData.name
-        positionLabel.text = "Position: "+championData.position
-        ultimateLabel.text = "Ultimate: "+championData.ultimate
-        roleLabel.text = "Role: "+championData.role
-        imageLabel.text = "Image: "+championData.image
+        positionLabel.text = " Position: "+championData.position
+        ultimateLabel.text = " Ultimate: "+championData.ultimate
+        roleLabel.text = " Role: "+championData.role
+        imageLabel.text = " Image: "+championData.image
         urlLabel.text = "Click to see web page!"
+        
+        nameLabel.layer.shadowOpacity = 0.1
+        nameLabel.layer.shadowOffset = CGSize(width: 2, height: 2)
+        
+        ultimateLabel.layer.borderWidth = 1
+        ultimateLabel.layer.cornerRadius = 5
+        ultimateLabel.clipsToBounds = true
+        
+        positionLabel.layer.borderWidth = 1
+        positionLabel.layer.cornerRadius = 5
+        positionLabel.clipsToBounds = true
+        
+        roleLabel.layer.borderWidth = 1
+        roleLabel.layer.cornerRadius = 5
+        roleLabel.clipsToBounds = true
+        
+        imageLabel.layer.borderWidth = 1
+        imageLabel.layer.cornerRadius = 5
+        imageLabel.clipsToBounds = true
+        
+        urlLabel.layer.cornerRadius = 5
+        urlLabel.clipsToBounds = true
+        
+        positionLabel.layer.shadowColor = nil
+        ultimateLabel.layer.shadowColor = nil
+        roleLabel.layer.shadowColor = nil
+        imageLabel.layer.shadowColor = nil
         
         if femaleChampions.contains(championData.name){
             view.backgroundColor = lightPink
+            
+            nameLabel.textColor = UIColor.red
+            
+            positionLabel.layer.borderColor = UIColor.red.cgColor
+            ultimateLabel.layer.borderColor = UIColor.red.cgColor
+            roleLabel.layer.borderColor = UIColor.red.cgColor
+            imageLabel.layer.borderColor = UIColor.red.cgColor
+        
         }else if maleChampions.contains(championData.name){
             view.backgroundColor = lightBlue
+            
+            nameLabel.textColor = UIColor.blue
+            
+            positionLabel.layer.borderColor = UIColor.blue.cgColor
+            ultimateLabel.layer.borderColor = UIColor.blue.cgColor
+            roleLabel.layer.borderColor = UIColor.blue.cgColor
+            imageLabel.layer.borderColor = UIColor.blue.cgColor
         }else{
             view.backgroundColor = UIColor.systemGray6
         }
@@ -51,7 +95,9 @@ class DetailsViewController: UIViewController {
         urlLabel.addGestureRecognizer(tapGesture)
     }
     
+   
     //MARK: - Actions
+    
     @objc func openWebPage(){
         let urlString = championData.url
         
