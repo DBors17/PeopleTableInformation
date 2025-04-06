@@ -68,8 +68,12 @@ class WildriftTableViewController: UITableViewController {
         cell.contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
         cell.contentView.layer.shadowRadius = 3
         cell.contentView.layer.masksToBounds = true
-        cell.contentView.backgroundColor = UIColor.systemGray6
         
+        if indexPath.row % 2 == 0 {
+            cell.contentView.backgroundColor = UIColor.systemGray6
+        }else{
+            cell.contentView.backgroundColor = UIColor.systemGray5
+        }
         return cell
     }
 

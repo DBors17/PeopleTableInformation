@@ -32,12 +32,17 @@ class ViewController: UIViewController{
     
     var wildriftData : Wildrift!
     
+    let femaleChampions = ["Ashe", "Ahri","Ambessa", "Akali", "Fiora", "Irelia" , "Seraphine" ,"Riven", "Sivir" , "Vi" , "Zyra"]
+    let maleChampions = ["Brand", "Braum", "Garen", "Heimerdinger" , "Milio", "Viktor", "Wukong" , "Xin Zhao"]
+    
+    let lightPink = UIColor(red: 1.0, green: 0.8, blue: 0.9, alpha: 1.0)
+    let lightBlue = UIColor(red: 0.7, green: 0.85, blue: 1.0, alpha: 1.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // get model data
         wildriftData = Wildrift(name : "champions.xml")
         
-        //personData = personData.getPerson(index: personIndex)
         
         championLabel.text = championData.name
         championRoleLabel.text = championData.role
@@ -45,8 +50,17 @@ class ViewController: UIViewController{
         //populate outlets with data
         championImageView.image = UIImage(named: championData.image)
         
+        if femaleChampions.contains(championData.name){
+            view.backgroundColor = lightPink
+        }else if maleChampions.contains(championData.name){
+            view.backgroundColor = lightBlue
+        }else{
+            view.backgroundColor = UIColor.systemGray6
+        }
+        
         self.title = "Champion"
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "seque1"{
