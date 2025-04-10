@@ -89,8 +89,20 @@
                                 <color key="textColor" red="0.0" green="0.13688370212508216" blue="0.28781411082474229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-SN-W1J">
+                                <rect key="frame" x="80" y="499" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G7M-nE-9hN">
+                                        <rect key="frame" x="20" y="8" width="200" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nHg-DF-rR3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="yla-Xe-pm3"/>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIf-r8-Eqq">
-                                <rect key="frame" x="124" y="561" width="167" height="53"/>
+                                <rect key="frame" x="117" y="691" width="167" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="tintColor" red="0.0" green="0.080431384790000005" blue="0.16911646259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
@@ -111,6 +123,7 @@
                         <outlet property="championImageView" destination="Hd2-1A-2Ov" id="8q1-m1-MVS"/>
                         <outlet property="championLabel" destination="NoP-qz-jR3" id="bp8-Bt-mET"/>
                         <outlet property="championRoleLabel" destination="Spu-Fp-TuV" id="q8q-zb-eS0"/>
+                        <outlet property="galleryStackView" destination="G7M-nE-9hN" id="dE7-8p-9wZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5k-KO-Scv" sceneMemberID="firstResponder"/>
@@ -191,7 +204,6 @@
         <!--Navigation Controller-->
         <scene sceneID="HVv-mC-ot9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GHn-8b-Ttc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h9h-zt-H4I" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QVz-9A-pr8">
@@ -203,6 +215,7 @@
                         <segue destination="rq0-2K-FRo" kind="relationship" relationship="rootViewController" id="Ed7-MK-egb"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHn-8b-Ttc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-188.40579710144928" y="90.401785714285708"/>
         </scene>

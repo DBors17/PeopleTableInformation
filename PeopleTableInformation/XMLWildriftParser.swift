@@ -24,6 +24,9 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
     var championData : Champion!
     var wildriftData = [Champion]()
     
+    var galleryImages: [String] = []
+    var insideGallery = false
+    
     var parser : XMLParser!
     
     var tags  = ["name", "position", "ultimate", "role", "image", "url"]
@@ -34,6 +37,10 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
         // check spys to see if string data is important and save
         
         if passData{
+            if insideGallery && passElement == -1 {
+                galleryImages.append(string.trimmingCharacters(in: .whitespacesAndNewlines))
+            }else{
+            
             switch passElement{
             case 0 : pName = string
             case 1 : pPosition = string
@@ -45,14 +52,20 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
             }
         }
     }
+}
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
+        if elementName == "gallery"{
+            insideGallery = true
+            galleryImages = []
+        }
+        
         //set the spys based on elementName if in tags
         
-        if tags.contains(elementName){
+        if tags.contains(elementName) || (insideGallery && elementName == "image"){
             passData = true
-            passElement = tags.firstIndex(of: elementName)!
+            passElement = tags.firstIndex(of: elementName) ?? -1
         }
     }
     
@@ -60,13 +73,23 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
         
         //reset spys if element name in tags
         
-        if tags.contains(elementName){
+        if tags.contains(elementName) || (insideGallery && elementName == "image"){
             passData = false
             passElement = -1
         }
         
+        if elementName == "gallery"{
+            insideGallery = false
+        }
+        
         if elementName == "champion"{
-            championData = Champion(name: pName, position: pPosition, ultimate: pUltimate, role: pRole, image: pImage, url: pUrl)
+            championData = Champion(name: pName,
+                                    position: pPosition,
+                                    ultimate: pUltimate,
+                                    role: pRole,
+                                    image: pImage,
+                                    url: pUrl,
+                                    gallery: galleryImages)
             wildriftData.append(championData)
         }
     }

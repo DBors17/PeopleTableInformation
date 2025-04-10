@@ -18,6 +18,8 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var championLabel: UILabel!
     
+    @IBOutlet weak var galleryStackView: UIStackView!
+    
     func update(){
         championLabel.text = championData.name
         
@@ -65,6 +67,21 @@ class ViewController: UIViewController{
             let destController = segue.destination as! DetailsViewController
             
             destController.championData = self.championData
+        }
+    }
+    
+    func loadGalleryImages(){
+        for imageName in championData.gallery{
+            if let image = UIImage(named: imageName){
+                let imageView = UIImageView(image: image)
+                imageView.contentMode = .scaleAspectFit
+                imageView.clipsToBounds = true
+                imageView.layer.cornerRadius = 8
+                imageView.translatesAutoresizingMaskIntoConstraints = false
+                imageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+                imageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+                galleryStackView.addArrangedSubview(imageView)
+            }
         }
     }
     
