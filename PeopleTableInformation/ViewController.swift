@@ -20,6 +20,8 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var galleryStackView: UIStackView!
     
+    @IBOutlet weak var scrollViewGallery: UIScrollView!
+    
     func update(){
         championLabel.text = championData.name
         
@@ -44,6 +46,8 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // get model data
         wildriftData = Wildrift(name : "champions.xml")
+        
+        scrollViewGallery.isPagingEnabled = true
         
         //populate outlets with data
         championLabel.text = championData.name
@@ -81,8 +85,10 @@ class ViewController: UIViewController{
                 imageGalleryView.clipsToBounds = true
                 imageGalleryView.layer.cornerRadius = 8
                 imageGalleryView.translatesAutoresizingMaskIntoConstraints = false
-                imageGalleryView.widthAnchor.constraint(equalToConstant: 150).isActive = true
-                imageGalleryView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+                NSLayoutConstraint.activate([
+                    imageGalleryView.widthAnchor.constraint(equalToConstant: 150),
+                    imageGalleryView.heightAnchor.constraint(equalToConstant: 150)
+                ])
                 galleryStackView.addArrangedSubview(imageGalleryView)
             }
         }

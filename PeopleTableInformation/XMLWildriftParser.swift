@@ -40,7 +40,6 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
             if insideGallery && passElement == -1 {
                 galleryImages.append(string.trimmingCharacters(in: .whitespacesAndNewlines))
             }else{
-            
             switch passElement{
             case 0 : pName = string
             case 1 : pPosition = string
@@ -63,7 +62,7 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
         
         //set the spys based on elementName if in tags
         
-        if tags.contains(elementName) || (insideGallery && elementName == "image"){
+        if tags.contains(elementName) || (insideGallery && elementName == "img"){
             passData = true
             passElement = tags.firstIndex(of: elementName) ?? -1
         }
@@ -73,7 +72,7 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
         
         //reset spys if element name in tags
         
-        if tags.contains(elementName) || (insideGallery && elementName == "image"){
+        if tags.contains(elementName) || (insideGallery && elementName == "img"){
             passData = false
             passElement = -1
         }
