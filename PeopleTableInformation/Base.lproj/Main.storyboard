@@ -89,23 +89,6 @@
                                 <color key="textColor" red="0.0" green="0.13688370212508216" blue="0.28781411082474229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-SN-W1J">
-                                <rect key="frame" x="80" y="487" width="240" height="128"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G7M-nE-9hN">
-                                        <rect key="frame" x="20" y="8" width="200" height="110"/>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="G7M-nE-9hN" firstAttribute="leading" secondItem="dDm-SN-W1J" secondAttribute="leading" constant="20" symbolic="YES" id="pKE-ee-61u"/>
-                                    <constraint firstItem="G7M-nE-9hN" firstAttribute="top" secondItem="dDm-SN-W1J" secondAttribute="top" constant="8" id="q4g-o9-qMu"/>
-                                    <constraint firstAttribute="trailing" secondItem="G7M-nE-9hN" secondAttribute="trailing" constant="20" symbolic="YES" id="qQU-TY-Id7"/>
-                                    <constraint firstAttribute="bottom" secondItem="G7M-nE-9hN" secondAttribute="bottom" constant="10" id="tuM-M5-38y"/>
-                                    <constraint firstItem="G7M-nE-9hN" firstAttribute="height" secondItem="dDm-SN-W1J" secondAttribute="height" multiplier="0.859375" id="tua-el-lBA"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="nHg-DF-rR3"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="yla-Xe-pm3"/>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIf-r8-Eqq">
                                 <rect key="frame" x="117" y="691" width="167" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -119,6 +102,25 @@
                                     <segue destination="wLQ-QY-8ft" kind="show" identifier="seque1" id="w1r-nv-aE0"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-SN-W1J">
+                                <rect key="frame" x="80" y="509" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="G7M-nE-9hN">
+                                        <rect key="frame" x="2" y="8" width="235" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nHg-DF-rR3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="yla-Xe-pm3"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWw-KC-r58">
+                                <rect key="frame" x="80" y="478" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.1368837021" blue="0.28781411080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4y0-XX-xvL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -64,6 +64,17 @@ class ViewController: UIViewController{
         
         self.title = "Champion"
         
+        //fix contrains between stack and scrollView
+        galleryStackView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            galleryStackView.topAnchor.constraint(equalTo: scrollViewGallery.contentLayoutGuide.topAnchor),
+            galleryStackView.bottomAnchor.constraint(equalTo: scrollViewGallery.contentLayoutGuide.bottomAnchor),
+            galleryStackView.leadingAnchor.constraint(equalTo: scrollViewGallery.contentLayoutGuide.leadingAnchor),
+            galleryStackView.trailingAnchor.constraint(equalTo: scrollViewGallery.contentLayoutGuide.trailingAnchor),
+            galleryStackView.heightAnchor.constraint(equalTo: scrollViewGallery.frameLayoutGuide.heightAnchor)
+        ])
+        
+        
         // load images
         loadGalleryImages()
     }
@@ -86,8 +97,8 @@ class ViewController: UIViewController{
                 imageGalleryView.layer.cornerRadius = 8
                 imageGalleryView.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([
-                    imageGalleryView.widthAnchor.constraint(equalToConstant: 150),
-                    imageGalleryView.heightAnchor.constraint(equalToConstant: 150)
+                    imageGalleryView.widthAnchor.constraint(equalToConstant: 200),
+                    imageGalleryView.heightAnchor.constraint(equalToConstant: 200)
                 ])
                 galleryStackView.addArrangedSubview(imageGalleryView)
             }
