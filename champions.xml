@@ -7,6 +7,10 @@
             <role>Mage/Assassin</role>
             <image>Ahri.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/ahri/</url>
+            <gallery>
+                <image>Ahri_1.jpg</image>
+                <image>Ahri_2.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Akali</name>
@@ -15,6 +19,9 @@
             <role>Assassin</role>
             <image>Akali.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/akali/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Ambessa</name>
@@ -23,6 +30,9 @@
             <role>Fighter/Assassin</role>
             <image>Ambessa.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/ambessa/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Ashe</name>
@@ -31,6 +41,9 @@
             <role>Marksman/Support</role>
             <image>Ashe.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/ashe/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Brand</name>
@@ -39,6 +52,9 @@
             <role>Mage</role>
             <image>Brand.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/brand/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Braum</name>
@@ -47,6 +63,9 @@
             <role>Support/Tank</role>
             <image>Braum.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/braum/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Fiora</name>
@@ -55,6 +74,9 @@
             <role>Fighter/Assassin</role>
             <image>Fiora.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/fiora/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Garen</name>
@@ -63,6 +85,9 @@
             <role>Fighter/Tank</role>
             <image>Garen.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/garen/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Heimerdinger</name>
@@ -71,6 +96,9 @@
             <role>Mage/Support</role>
             <image>Heimerdinger.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/heimerdinger/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Irelia</name>
@@ -79,6 +107,9 @@
             <role>Fighter/Assassin</role>
             <image>Irelia.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/irelia/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Milio</name>
@@ -87,6 +118,9 @@
             <role>Support/Mage</role>
             <image>Milio.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/milio/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Riven</name>
@@ -95,6 +129,9 @@
             <role>Fighter/Assassin</role>
             <image>Riven.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/riven/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Seraphine</name>
@@ -103,6 +140,9 @@
             <role>Mage/Support</role>
             <image>Seraphine.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/seraphine/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Sivir</name>
@@ -111,6 +151,9 @@
             <role>Marksman</role>
             <image>Sivir.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/sivir/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Vi</name>
@@ -119,6 +162,9 @@
             <role>Fighter</role>
             <image>Vi.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/vi/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Viktor</name>
@@ -127,6 +173,9 @@
             <role>Mage</role>
             <image>Viktor.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/viktor/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Wukong</name>
@@ -135,6 +184,9 @@
             <role>Fighter/Tank</role>
             <image>Wukong.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/wukong/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Xin Zhao</name>
@@ -143,6 +195,9 @@
             <role>Fighter/Tank</role>
             <image>Xin-Zhao.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/xin-zhao/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
         <champion>
             <name>Zyra</name>
@@ -151,5 +206,8 @@
             <role>Mage</role>
             <image>Zyra.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/zyra/</url>
+            <gallery>
+                <image>Image.jpg</image>
+            </gallery>
         </champion>
     </wildrift>
