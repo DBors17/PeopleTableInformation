@@ -8,8 +8,8 @@
             <image>Ahri.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/ahri/</url>
             <gallery>
-                <image>Ahri_1.jpg</image>
-                <image>Ahri_2.jpg</image>
+                <img>Ahri_1.jpg</img>
+                <img>Ahri_2.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -20,7 +20,7 @@
             <image>Akali.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/akali/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -31,7 +31,7 @@
             <image>Ambessa.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/ambessa/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -42,7 +42,7 @@
             <image>Ashe.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/ashe/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -53,7 +53,7 @@
             <image>Brand.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/brand/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -64,7 +64,7 @@
             <image>Braum.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/braum/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -75,7 +75,7 @@
             <image>Fiora.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/fiora/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -86,7 +86,7 @@
             <image>Garen.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/garen/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -97,7 +97,7 @@
             <image>Heimerdinger.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/heimerdinger/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -108,7 +108,7 @@
             <image>Irelia.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/irelia/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -119,7 +119,7 @@
             <image>Milio.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/milio/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -130,7 +130,7 @@
             <image>Riven.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/riven/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -141,7 +141,7 @@
             <image>Seraphine.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/seraphine/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -152,7 +152,7 @@
             <image>Sivir.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/sivir/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -163,7 +163,7 @@
             <image>Vi.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/vi/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -174,7 +174,7 @@
             <image>Viktor.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/viktor/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -185,7 +185,7 @@
             <image>Wukong.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/wukong/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -196,7 +196,7 @@
             <image>Xin-Zhao.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/xin-zhao/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
         <champion>
@@ -207,7 +207,7 @@
             <image>Zyra.jpg</image>
             <url>https://wildrift.leagueoflegends.com/en-us/champions/zyra/</url>
             <gallery>
-                <image>Image.jpg</image>
+                <img>Image.jpg</img>
             </gallery>
         </champion>
     </wildrift>

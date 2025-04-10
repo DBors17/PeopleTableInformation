@@ -59,6 +59,9 @@ class ViewController: UIViewController{
         }
         
         self.title = "Champion"
+        
+        // load images
+        loadGalleryImages()
     }
     
     
@@ -73,14 +76,14 @@ class ViewController: UIViewController{
     func loadGalleryImages(){
         for imageName in championData.gallery{
             if let image = UIImage(named: imageName){
-                let imageView = UIImageView(image: image)
-                imageView.contentMode = .scaleAspectFit
-                imageView.clipsToBounds = true
-                imageView.layer.cornerRadius = 8
-                imageView.translatesAutoresizingMaskIntoConstraints = false
-                imageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
-                imageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
-                galleryStackView.addArrangedSubview(imageView)
+                let imageGalleryView = UIImageView(image: image)
+                imageGalleryView.contentMode = .scaleAspectFit
+                imageGalleryView.clipsToBounds = true
+                imageGalleryView.layer.cornerRadius = 8
+                imageGalleryView.translatesAutoresizingMaskIntoConstraints = false
+                imageGalleryView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+                imageGalleryView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+                galleryStackView.addArrangedSubview(imageGalleryView)
             }
         }
     }
