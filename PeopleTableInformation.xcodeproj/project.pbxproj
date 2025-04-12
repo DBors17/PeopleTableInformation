@@ -56,7 +56,7 @@
 		20680E162D89DDFD0048C177 = {
 			isa = PBXGroup;
 			children = (
-				20680E212D89DDFD0048C177 /* PeopleTableInformation */,
+				20680E212D89DDFD0048C177 /* WildriftChampionInformation */,
 				20680E202D89DDFD0048C177 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +69,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20680E212D89DDFD0048C177 /* PeopleTableInformation */ = {
+		20680E212D89DDFD0048C177 /* WildriftChampionInformation */ = {
 			isa = PBXGroup;
 			children = (
 				526F06652DA2965800C6D1E0 /* CustomCell.swift */,
@@ -88,7 +88,7 @@
 				526150262D982695008DA3C1 /* DetailsViewController.swift */,
 				5230FCD62D9839FF005AA553 /* XMLWildriftParser.swift */,
 			);
-			path = PeopleTableInformation;
+			path = WildriftChampionInformation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
