@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G918" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDChampion" representedClassName=".CDChampion" syncable="YES">
+        <attribute name="gallery" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="position" optional="YES" attributeType="String"/>
+        <attribute name="role" optional="YES" attributeType="String"/>
+        <attribute name="ultimate" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="CDChampion" positionX="-12463.044921875" positionY="-5387.00537109375" width="128" height="148"/>
+    </elements>
+</model>

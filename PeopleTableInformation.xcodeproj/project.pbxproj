@@ -21,6 +21,10 @@
 		526D14622D98389900BACC5D /* champions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 526D14612D98389900BACC5D /* champions.xml */; };
 		526F06662DA2965800C6D1E0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F06652DA2965800C6D1E0 /* CustomCell.swift */; };
 		5279CA422DA160660092031E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279CA412DA160660092031E /* WebViewController.swift */; };
+		5283FA772DD6669400A966E3 /* WildriftModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5283FA752DD6669400A966E3 /* WildriftModel.xcdatamodeld */; };
+		5283FA822DD66CBD00A966E3 /* CDChampion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283FA802DD66CBD00A966E3 /* CDChampion+CoreDataClass.swift */; };
+		5283FA832DD66CBD00A966E3 /* CDChampion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283FA812DD66CBD00A966E3 /* CDChampion+CoreDataProperties.swift */; };
+		5283FA852DD6713200A966E3 /* AddUpdateChampionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283FA842DD6713200A966E3 /* AddUpdateChampionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		526D14612D98389900BACC5D /* champions.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = champions.xml; sourceTree = SOURCE_ROOT; };
 		526F06652DA2965800C6D1E0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = SOURCE_ROOT; };
 		5279CA412DA160660092031E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = SOURCE_ROOT; };
+		5283FA762DD6669400A966E3 /* WildriftModel.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = WildriftModel.xcdatamodel; sourceTree = "<group>"; };
+		5283FA802DD66CBD00A966E3 /* CDChampion+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDChampion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5283FA812DD66CBD00A966E3 /* CDChampion+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDChampion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5283FA842DD6713200A966E3 /* AddUpdateChampionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateChampionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,8 @@
 		20680E212D89DDFD0048C177 /* WildriftChampionInformation */ = {
 			isa = PBXGroup;
 			children = (
+				5283FA802DD66CBD00A966E3 /* CDChampion+CoreDataClass.swift */,
+				5283FA812DD66CBD00A966E3 /* CDChampion+CoreDataProperties.swift */,
 				526F06652DA2965800C6D1E0 /* CustomCell.swift */,
 				526D14612D98389900BACC5D /* champions.xml */,
 				20680E222D89DDFD0048C177 /* AppDelegate.swift */,
@@ -87,6 +97,8 @@
 				526150242D98267E008DA3C1 /* ViewController.swift */,
 				526150262D982695008DA3C1 /* DetailsViewController.swift */,
 				5230FCD62D9839FF005AA553 /* XMLWildriftParser.swift */,
+				5283FA752DD6669400A966E3 /* WildriftModel.xcdatamodeld */,
+				5283FA842DD6713200A966E3 /* AddUpdateChampionViewController.swift */,
 			);
 			path = WildriftChampionInformation;
 			sourceTree = "<group>";
@@ -165,6 +177,10 @@
 			files = (
 				526150252D98267E008DA3C1 /* ViewController.swift in Sources */,
 				5279CA422DA160660092031E /* WebViewController.swift in Sources */,
+				5283FA852DD6713200A966E3 /* AddUpdateChampionViewController.swift in Sources */,
+				5283FA772DD6669400A966E3 /* WildriftModel.xcdatamodeld in Sources */,
+				5283FA832DD66CBD00A966E3 /* CDChampion+CoreDataProperties.swift in Sources */,
+				5283FA822DD66CBD00A966E3 /* CDChampion+CoreDataClass.swift in Sources */,
 				526F06662DA2965800C6D1E0 /* CustomCell.swift in Sources */,
 				526150212D9825F2008DA3C1 /* Champion.swift in Sources */,
 				20680E232D89DDFD0048C177 /* AppDelegate.swift in Sources */,
@@ -390,6 +406,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5283FA752DD6669400A966E3 /* WildriftModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5283FA762DD6669400A966E3 /* WildriftModel.xcdatamodel */,
+			);
+			currentVersion = 5283FA762DD6669400A966E3 /* WildriftModel.xcdatamodel */;
+			path = WildriftModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 20680E172D89DDFD0048C177 /* Project object */;
 }
