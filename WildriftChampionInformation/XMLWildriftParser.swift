@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 class XMLWildriftParser: NSObject, XMLParserDelegate{
     var name:String
@@ -103,4 +105,33 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
         parser.parse()
     }
     
+    
+    func saveToCoreDataIfNeeded() {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let fetchRequest: NSFetchRequest<CDChampion> = CDChampion.fetchRequest()
+            if let count = try? context.count(for: fetchRequest), count > 0 {
+                print("We already have data in Core Data")
+                return
+            }
+
+            for champ in wildriftData {
+                let newChampion = CDChampion(context: context)
+                newChampion.name = champ.name
+                newChampion.position = champ.position
+                newChampion.ultimate = champ.ultimate
+                newChampion.role = champ.role
+                newChampion.image = champ.image
+                newChampion.url = champ.url
+                newChampion.gallery = champ.gallery.joined(separator: ",")
+            }
+            
+            do {
+                try context.save()
+                print("Champions was uploaded in Core Data.")
+            } catch {
+                print("Error to save in Core Data: \(error)")
+            }
+    }
+
 }
