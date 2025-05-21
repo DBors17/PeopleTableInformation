@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         updateUI()
         setupConstraints()
         loadGalleryImages()
+        
     }
     
     // MARK: - UI Update
@@ -110,6 +111,15 @@ class ViewController: UIViewController {
         } catch {
             print("Error to get data from Core Data: \(error)")
         }
+    }
+    
+    
+    func isFirstLaunch() -> Bool {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "hasLaunched")
+        if !launchedBefore {
+            UserDefaults.standard.set(true, forKey: "hasLaunched")
+        }
+        return !launchedBefore
     }
 
     // MARK: - Navigation

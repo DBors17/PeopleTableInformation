@@ -15,5 +15,6 @@ class CustomCell: UITableViewCell{
     @IBOutlet weak var cellChampionNameLabel: UILabel!
     @IBOutlet weak var cellChampionDetailsLabel: UILabel!
     @IBOutlet weak var cellChampionImage: UIImageView!
-    
+    @IBAction func editButton(_ sender: Any) {
+    }
 }

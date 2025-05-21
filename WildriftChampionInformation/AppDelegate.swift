@@ -10,11 +10,27 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    func isFirstLaunch() -> Bool {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "hasLaunched")
+        if !launchedBefore {
+            UserDefaults.standard.set(true, forKey: "hasLaunched")
+        }
+        return !launchedBefore
+    }
 
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        if isFirstLaunch() {
+            print("First launch - parsing XML and saving to Core Data")
+            let parser = XMLWildriftParser(name: "champions")
+            parser.startParsing()
+            parser.saveToCoreDataIfNeeded()
+        } else {
+            print("Not first launch - skipping XML parse")
+        }
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         return true
     }
 

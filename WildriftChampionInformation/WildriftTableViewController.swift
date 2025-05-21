@@ -7,6 +7,7 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var frc: NSFetchedResultsController<CDChampion>!
 
+    
     // MARK: - Search
     var filteredChampions: [CDChampion] = []
     var isSearching = false
@@ -28,14 +29,16 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
         // FRC setup
         frc = NSFetchedResultsController(fetchRequest: makeRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         frc.delegate = self
-
+        
         do {
             try frc.performFetch()
+            print("Champions fetched:", frc.fetchedObjects?.count ?? 0)
         } catch {
             print("Error fetching champions: \(error)")
         }
-
         filteredChampions = frc.fetchedObjects ?? []
+        
+        
     }
 
     func makeRequest() -> NSFetchRequest<CDChampion> {
@@ -116,15 +119,19 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
                 filteredChampions[indexPath!.row] :
                 frc.object(at: indexPath!)
 
-            destController.championData = Champion(
-                name: selectedChampion.name ?? "",
-                position: selectedChampion.position ?? "",
-                ultimate: selectedChampion.ultimate ?? "",
-                role: selectedChampion.role ?? "",
-                image: selectedChampion.image ?? "",
-                url: selectedChampion.url ?? "",
-                gallery: selectedChampion.gallery?.components(separatedBy: ",") ?? []
-            )
+            destController.championData = selectedChampion
+        }
+        
+        if segue.identifier == "showAddChampion" {
+            let destinationVC = segue.destination as! AddUpdateChampionViewController
+
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let selectedChampion = isSearching ?
+                    filteredChampions[indexPath.row] :
+                    frc.object(at: indexPath)
+
+                destinationVC.cManagedObject = selectedChampion
+            }
         }
     }
 }

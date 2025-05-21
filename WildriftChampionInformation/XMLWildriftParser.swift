@@ -97,10 +97,13 @@ class XMLWildriftParser: NSObject, XMLParserDelegate{
     
     func startParsing(){
         //get the xml file url
-        let bundleUrl = Bundle.main.bundleURL
-        let xmlFileUrl = URL(string: self.name, relativeTo: bundleUrl)
+        guard let xmlFileUrl = Bundle.main.url(forResource: self.name, withExtension: "xml") else {
+            print("XML file not found")
+            return
+        }
+
         
-        parser = XMLParser(contentsOf: xmlFileUrl!)
+        parser = XMLParser(contentsOf: xmlFileUrl)
         parser.delegate = self
         parser.parse()
     }

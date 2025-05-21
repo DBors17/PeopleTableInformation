@@ -11,6 +11,7 @@ import CoreData
 class AddUpdateChampionViewController: UIViewController, UINavigationControllerDelegate {
     
     // MARK: - Outlets
+
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var positionTF: UITextField!
     @IBOutlet weak var ultimateTF: UITextField!
@@ -20,7 +21,8 @@ class AddUpdateChampionViewController: UIViewController, UINavigationControllerD
     @IBOutlet weak var galleryTF: UITextField! // ex: img1,img2,img3
     
     // MARK: - Actions
-    @IBAction func addSaveButton(_ sender: Any){
+    
+    @IBAction func addSaveButton(_ sender: Any) {
         if cManagedObject == nil {
             createChampion()
         } else {
@@ -70,6 +72,8 @@ class AddUpdateChampionViewController: UIViewController, UINavigationControllerD
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Add/Update Champion"
 
         if let champion = cManagedObject {
             nameTF.text = champion.name
