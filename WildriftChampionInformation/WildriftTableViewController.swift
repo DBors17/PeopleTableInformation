@@ -16,8 +16,11 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = "Wildrift Champions"
+
+        // Add button in navigation bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addChampionTapped))
 
         // Search setup
         searchController.searchResultsUpdater = self
@@ -29,17 +32,22 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
         // FRC setup
         frc = NSFetchedResultsController(fetchRequest: makeRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         frc.delegate = self
-        
+
         do {
             try frc.performFetch()
             print("Champions fetched:", frc.fetchedObjects?.count ?? 0)
         } catch {
             print("Error fetching champions: \(error)")
         }
+
         filteredChampions = frc.fetchedObjects ?? []
-        
-        
     }
+    
+    // MARK: - Add Champion Action
+    @objc func addChampionTapped() {
+        performSegue(withIdentifier: "showAddChampion", sender: nil)
+    }
+
     
     func editButtonTapped(on cell: CustomCell) {
         if let indexPath = tableView.indexPath(for: cell) {
@@ -47,7 +55,7 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
                 filteredChampions[indexPath.row] :
                 frc.object(at: indexPath)
 
-            performSegue(withIdentifier: "showAddChampion", sender: selectedChampion)
+            performSegue(withIdentifier: "editChampion", sender: selectedChampion)
         }
     }
 
@@ -61,6 +69,20 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.reloadData()
     }
+    
+    func isFavorite(champion: CDChampion) -> Bool {
+        let request: NSFetchRequest<CDFavorite> = CDFavorite.fetchRequest()
+        request.predicate = NSPredicate(format: "champion == %@", champion)
+        
+        do {
+            let result = try context.fetch(request)
+            return !result.isEmpty
+        } catch {
+            print("Error checking favorite status: \(error)")
+            return false
+        }
+    }
+
 
     // MARK: - Search
     func updateSearchResults(for searchController: UISearchController) {
@@ -92,8 +114,9 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
         return 50
     }
 
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell else {
             return UITableViewCell()
         }
@@ -114,7 +137,14 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
         cell.contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
         cell.contentView.layer.shadowRadius = 3
         cell.contentView.layer.masksToBounds = true
-        cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.systemGray6 : UIColor.systemGray5
+        let isFavoriteChampion = isFavorite(champion: currentChampion)
+
+        if isFavoriteChampion {
+            cell.contentView.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.3)
+        } else {
+            cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.systemGray6 : UIColor.systemGray5
+        }
+
 
         // set delegate
         cell.delegate = self
@@ -125,23 +155,23 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "seque2" {
-            let destController = segue.destination as! ViewController
-            let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
+                    let destController = segue.destination as! ViewController
+                    let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
 
-            let selectedChampion = isSearching ?
-                filteredChampions[indexPath!.row] :
-                frc.object(at: indexPath!)
+                    let selectedChampion = isSearching ?
+                        filteredChampions[indexPath!.row] :
+                        frc.object(at: indexPath!)
 
-            destController.championData = selectedChampion
+                    destController.championData = selectedChampion
+                }
+
+        if segue.identifier == "editChampion" {
+            let destinationVC = segue.destination as! AddUpdateChampionViewController
+
+            if let selectedChampion = sender as? CDChampion {
+                destinationVC.cManagedObject = selectedChampion
+            }
         }
-        
-        if segue.identifier == "showAddChampion" {
-               let destinationVC = segue.destination as! AddUpdateChampionViewController
-
-               if let selectedChampion = sender as? CDChampion {
-                   destinationVC.cManagedObject = selectedChampion
-               }
-           }
     }
 }
 

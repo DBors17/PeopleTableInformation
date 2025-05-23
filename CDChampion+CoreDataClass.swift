@@ -2,7 +2,7 @@
 //  CDChampion+CoreDataClass.swift
 //  PeopleTableInformation
 //
-//  Created by Dorin on 15.05.2025.
+//  Created by Dorin on 23.05.2025.
 //
 //
 

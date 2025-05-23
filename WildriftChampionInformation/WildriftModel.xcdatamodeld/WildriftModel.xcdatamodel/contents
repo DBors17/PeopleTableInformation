@@ -8,8 +8,13 @@
         <attribute name="role" optional="YES" attributeType="String"/>
         <attribute name="ultimate" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="favorite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFavorite" inverseName="champion" inverseEntity="CDFavorite"/>
+    </entity>
+    <entity name="CDFavorite" representedClassName=".CDFavorite" syncable="YES">
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDChampion" inverseName="favorite" inverseEntity="CDChampion"/>
     </entity>
     <elements>
-        <element name="CDChampion" positionX="-12463.044921875" positionY="-5387.00537109375" width="128" height="148"/>
+        <element name="CDChampion" positionX="-12463.044921875" positionY="-5387.00537109375" width="128" height="149"/>
+        <element name="CDFavorite" positionX="-12465" positionY="-5328" width="128" height="44"/>
     </elements>
 </model>

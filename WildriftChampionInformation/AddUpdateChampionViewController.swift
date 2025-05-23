@@ -20,7 +20,22 @@ class AddUpdateChampionViewController: UIViewController, UINavigationControllerD
     @IBOutlet weak var urlTF: UITextField!
     @IBOutlet weak var galleryTF: UITextField! // ex: img1,img2,img3
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     // MARK: - Actions
+    
+    
+    @IBAction func toggleFavoriteButtonTapped(_ sender: UIButton) {
+        guard let champion = cManagedObject else { return }
+
+        if isFavorite(champion) {
+            removeFromFavorites(champion)
+        } else {
+            addToFavorites(champion)
+        }
+
+        updateFavoriteButtonUI()
+    }
     
     @IBAction func addSaveButton(_ sender: Any) {
         if cManagedObject == nil {
@@ -31,6 +46,20 @@ class AddUpdateChampionViewController: UIViewController, UINavigationControllerD
         navigationController?.popViewController(animated: true)
     }
 
+    
+    @IBAction func deleteChampion(_ sender: Any) {
+        guard let championToDelete = cManagedObject else { return }
+
+        context.delete(championToDelete)
+
+        do {
+            try context.save()
+            navigationController?.popViewController(animated: true)
+        } catch {
+            print("Failed to delete champion: \(error.localizedDescription)")
+        }
+    }
+    
     // MARK: - Core Data
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var cEntity: NSEntityDescription!
@@ -58,6 +87,59 @@ class AddUpdateChampionViewController: UIViewController, UINavigationControllerD
             print("Failed to update champion: \(error.localizedDescription)")
         }
     }
+    
+    
+    
+    func addToFavorites(_ champion: CDChampion) {
+        let favorite = CDFavorite(context: context)
+        favorite.champion = champion
+
+        do {
+            try context.save()
+        } catch {
+            print("Failed to add to favorites: \(error)")
+        }
+    }
+
+    func removeFromFavorites(_ champion: CDChampion) {
+        let fetchRequest: NSFetchRequest<CDFavorite> = CDFavorite.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "champion == %@", champion)
+
+        do {
+            let favorites = try context.fetch(fetchRequest)
+            for fav in favorites {
+                context.delete(fav)
+            }
+            try context.save()
+        } catch {
+            print("Failed to remove from favorites: \(error)")
+        }
+    }
+    
+    func isFavorite(_ champion: CDChampion) -> Bool {
+        let fetchRequest: NSFetchRequest<CDFavorite> = CDFavorite.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "champion == %@", champion)
+
+        do {
+            let results = try context.fetch(fetchRequest)
+            return !results.isEmpty
+        } catch {
+            print("Error checking favorite status: \(error)")
+            return false
+        }
+    }
+    
+    func updateFavoriteButtonUI() {
+        guard let champion = cManagedObject else { return }
+
+        if isFavorite(champion) {
+            favoriteButton.setTitle("Remove from Favorites", for: .normal)
+        } else {
+            favoriteButton.setTitle("Add to Favorites", for: .normal)
+        }
+    }
+
+
 
     private func populateChampionFields() {
         cManagedObject.name = nameTF.text
@@ -83,6 +165,8 @@ class AddUpdateChampionViewController: UIViewController, UINavigationControllerD
             imageTF.text = champion.image
             urlTF.text = champion.url
             galleryTF.text = champion.gallery
+            
+            updateFavoriteButtonUI()
         }
     }
 }
