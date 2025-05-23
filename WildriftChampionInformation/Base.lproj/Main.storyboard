@@ -35,18 +35,17 @@
                                             <rect key="frame" x="315" y="-2" width="70" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mht-dR-CVz">
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mht-dR-CVz">
                                             <rect key="frame" x="249" y="6" width="49" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="gray" title="Edit"/>
                                             <connections>
-                                                <action selector="editButton:" destination="rq0-2K-FRo" eventType="touchUpInside" id="FUB-d9-hzM"/>
+                                                <action selector="editButtonPressed:" destination="V10-ng-tMa" eventType="touchUpInside" id="tJQ-rr-KIa"/>
                                                 <segue destination="6dH-G0-FDg" kind="show" identifier="showAddChampion" id="zNk-Zg-UKn"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHg-ci-GqQ">
-                                            <rect key="frame" x="146" y="0.0" width="111" height="44"/>
+                                            <rect key="frame" x="81" y="-2" width="111" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.080431384790000005" blue="0.16911646259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,6 +53,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="Mht-dR-CVz" firstAttribute="leading" secondItem="V10-ng-tMa" secondAttribute="leading" constant="249" id="nLZ-Jj-Mn4"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="cellChampionDetailsLabel" destination="xHg-ci-GqQ" id="CRt-g2-HHI"/>
                                     <outlet property="cellChampionImage" destination="BpC-gr-WbJ" id="1xi-zI-H0D"/>
@@ -238,19 +240,6 @@
                                 <color key="textColor" red="0.0" green="0.13688370212508216" blue="0.28781411082474229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIf-r8-Eqq">
-                                <rect key="frame" x="117" y="691" width="167" height="53"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <color key="tintColor" red="0.0" green="0.080431384790000005" blue="0.16911646259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="More Info" cornerStyle="small">
-                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
-                                    <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="wLQ-QY-8ft" kind="show" identifier="seque1" id="w1r-nv-aE0"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-SN-W1J">
                                 <rect key="frame" x="80" y="509" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -270,6 +259,19 @@
                                 <color key="textColor" red="0.0" green="0.1368837021" blue="0.28781411080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIf-r8-Eqq">
+                                <rect key="frame" x="117" y="671" width="167" height="53"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="tintColor" red="0.0" green="0.080431384790000005" blue="0.16911646259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="More Info" cornerStyle="small">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="wLQ-QY-8ft" kind="show" identifier="seque1" id="w1r-nv-aE0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4y0-XX-xvL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

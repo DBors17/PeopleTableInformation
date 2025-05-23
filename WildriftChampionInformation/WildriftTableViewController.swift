@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class WildriftTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+class WildriftTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating, CustomCellDelegate {
 
     // MARK: - Core Data
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -39,6 +39,16 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
         filteredChampions = frc.fetchedObjects ?? []
         
         
+    }
+    
+    func editButtonTapped(on cell: CustomCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            let selectedChampion = isSearching ?
+                filteredChampions[indexPath.row] :
+                frc.object(at: indexPath)
+
+            performSegue(withIdentifier: "showAddChampion", sender: selectedChampion)
+        }
     }
 
     func makeRequest() -> NSFetchRequest<CDChampion> {
@@ -83,7 +93,7 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+       
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell else {
             return UITableViewCell()
         }
@@ -106,6 +116,9 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
         cell.contentView.layer.masksToBounds = true
         cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.systemGray6 : UIColor.systemGray5
 
+        // set delegate
+        cell.delegate = self
+        
         return cell
     }
 
@@ -123,16 +136,12 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
         }
         
         if segue.identifier == "showAddChampion" {
-            let destinationVC = segue.destination as! AddUpdateChampionViewController
+               let destinationVC = segue.destination as! AddUpdateChampionViewController
 
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let selectedChampion = isSearching ?
-                    filteredChampions[indexPath.row] :
-                    frc.object(at: indexPath)
-
-                destinationVC.cManagedObject = selectedChampion
-            }
-        }
+               if let selectedChampion = sender as? CDChampion {
+                   destinationVC.cManagedObject = selectedChampion
+               }
+           }
     }
 }
 

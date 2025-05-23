@@ -8,13 +8,21 @@
 import Foundation
 import UIKit
 
-class CustomCell: UITableViewCell{
-    
-    //MARK: - Outlets
-    
+// MARK: - Protocol
+protocol CustomCellDelegate: AnyObject {
+    func editButtonTapped(on cell: CustomCell)
+}
+
+// MARK: - Custom Cell
+class CustomCell: UITableViewCell {
+
     @IBOutlet weak var cellChampionNameLabel: UILabel!
     @IBOutlet weak var cellChampionDetailsLabel: UILabel!
     @IBOutlet weak var cellChampionImage: UIImageView!
-    @IBAction func editButton(_ sender: Any) {
+
+    weak var delegate: CustomCellDelegate?
+
+    @IBAction func editButtonPressed(_ sender: UIButton) {
+        delegate?.editButtonTapped(on: self)
     }
 }
