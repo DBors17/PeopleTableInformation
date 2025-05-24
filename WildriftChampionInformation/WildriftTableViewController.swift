@@ -21,6 +21,9 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
 
         // Add button in navigation bar
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addChampionTapped))
+        
+        let favoriteButton = UIBarButtonItem(image: UIImage(systemName: "star.fill"), style: .plain, target: self, action: #selector(showFavorites))
+        navigationItem.leftBarButtonItem = favoriteButton
 
         // Search setup
         searchController.searchResultsUpdater = self
@@ -48,6 +51,12 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
         performSegue(withIdentifier: "showAddChampion", sender: nil)
     }
 
+    @objc func showFavorites() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let favoritesVC = storyboard.instantiateViewController(withIdentifier: "FavoritesViewController") as? FavoritesViewController {
+            navigationController?.pushViewController(favoritesVC, animated: true)
+        }
+    }
     
     func editButtonTapped(on cell: CustomCell) {
         if let indexPath = tableView.indexPath(for: cell) {

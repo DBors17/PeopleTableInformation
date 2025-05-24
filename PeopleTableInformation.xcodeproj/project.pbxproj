@@ -17,6 +17,8 @@
 		526150212D9825F2008DA3C1 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150202D9825F2008DA3C1 /* Champion.swift */; };
 		526150252D98267E008DA3C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150242D98267E008DA3C1 /* ViewController.swift */; };
 		526150272D982695008DA3C1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526150262D982695008DA3C1 /* DetailsViewController.swift */; };
+		526676FF2DE1DF4200CD04EB /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526676FE2DE1DF4200CD04EB /* FavoritesViewController.swift */; };
+		526677012DE1E26100CD04EB /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526677002DE1E26100CD04EB /* FavoriteCell.swift */; };
 		526D14622D98389900BACC5D /* champions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 526D14612D98389900BACC5D /* champions.xml */; };
 		526F06662DA2965800C6D1E0 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F06652DA2965800C6D1E0 /* CustomCell.swift */; };
 		5279CA422DA160660092031E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5279CA412DA160660092031E /* WebViewController.swift */; };
@@ -41,6 +43,8 @@
 		526150202D9825F2008DA3C1 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		526150242D98267E008DA3C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		526150262D982695008DA3C1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		526676FE2DE1DF4200CD04EB /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		526677002DE1E26100CD04EB /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		526D14612D98389900BACC5D /* champions.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = champions.xml; sourceTree = SOURCE_ROOT; };
 		526F06652DA2965800C6D1E0 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = SOURCE_ROOT; };
 		5279CA412DA160660092031E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -102,6 +106,8 @@
 				5230FCD62D9839FF005AA553 /* XMLWildriftParser.swift */,
 				5283FA752DD6669400A966E3 /* WildriftModel.xcdatamodeld */,
 				5283FA842DD6713200A966E3 /* AddUpdateChampionViewController.swift */,
+				526676FE2DE1DF4200CD04EB /* FavoritesViewController.swift */,
+				526677002DE1E26100CD04EB /* FavoriteCell.swift */,
 			);
 			path = WildriftChampionInformation;
 			sourceTree = "<group>";
@@ -188,11 +194,13 @@
 				526150212D9825F2008DA3C1 /* Champion.swift in Sources */,
 				20680E232D89DDFD0048C177 /* AppDelegate.swift in Sources */,
 				5230FCD72D9839FF005AA553 /* XMLWildriftParser.swift in Sources */,
+				526676FF2DE1DF4200CD04EB /* FavoritesViewController.swift in Sources */,
 				20680E372D89DE6B0048C177 /* WildriftTableViewController.swift in Sources */,
 				52E633572DE108CF0084049A /* CDFavorite+CoreDataProperties.swift in Sources */,
 				526150272D982695008DA3C1 /* DetailsViewController.swift in Sources */,
 				52E633562DE108CF0084049A /* CDFavorite+CoreDataClass.swift in Sources */,
 				20680E252D89DDFD0048C177 /* SceneDelegate.swift in Sources */,
+				526677012DE1E26100CD04EB /* FavoriteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
