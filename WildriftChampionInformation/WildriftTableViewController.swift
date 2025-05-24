@@ -113,7 +113,14 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedChampion = isSearching ? filteredChampions[indexPath.row] : frc.object(at: indexPath)
+        
+        print("Selected champion: \(selectedChampion.name ?? "Unknown")")
+        
+        performSegue(withIdentifier: "seque2", sender: selectedChampion)
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -155,15 +162,12 @@ class WildriftTableViewController: UITableViewController, NSFetchedResultsContro
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "seque2" {
-                    let destController = segue.destination as! ViewController
-                    let indexPath = tableView.indexPath(for: sender as! UITableViewCell)
+            let destController = segue.destination as! ViewController
 
-                    let selectedChampion = isSearching ?
-                        filteredChampions[indexPath!.row] :
-                        frc.object(at: indexPath!)
-
-                    destController.championData = selectedChampion
-                }
+            if let selectedChampion = sender as? CDChampion {
+                destController.championData = selectedChampion
+            }
+        }
 
         if segue.identifier == "editChampion" {
             let destinationVC = segue.destination as! AddUpdateChampionViewController

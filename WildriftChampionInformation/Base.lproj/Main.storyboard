@@ -57,7 +57,6 @@
                                     <outlet property="cellChampionDetailsLabel" destination="xHg-ci-GqQ" id="CRt-g2-HHI"/>
                                     <outlet property="cellChampionImage" destination="BpC-gr-WbJ" id="1xi-zI-H0D"/>
                                     <outlet property="cellChampionNameLabel" destination="ZcS-pq-rb6" id="Wkq-fw-7CX"/>
-                                    <segue destination="3A2-fy-SlO" kind="show" identifier="seque2" id="rrI-Bg-w1c"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,6 +69,7 @@
                     <connections>
                         <segue destination="6dH-G0-FDg" kind="show" identifier="showAddChampion" id="SF4-3a-1iJ"/>
                         <segue destination="6dH-G0-FDg" kind="show" identifier="editChampion" id="L4e-Ks-dRU"/>
+                        <segue destination="3A2-fy-SlO" kind="show" identifier="seque2" id="Ox7-nk-Vy4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVn-75-f3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

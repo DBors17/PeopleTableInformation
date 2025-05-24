@@ -34,21 +34,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchChampionsFromCoreData()
-        
-        guard !allChampions.isEmpty else {
-            print("Nu există campioni în baza de date.")
-            return
+        // Dacă `championData` a fost deja setat de segue, nu îl înlocui.
+        if championData == nil {
+            fetchChampionsFromCoreData()
+            guard !allChampions.isEmpty else {
+                print("Nu există campioni în baza de date.")
+                return
+            }
+            championData = allChampions[championIndex]
         }
-        
-        championData = allChampions[championIndex]
-        
+
         scrollViewGallery.isPagingEnabled = true
         updateUI()
         setupConstraints()
         loadGalleryImages()
-        
     }
+
     
     // MARK: - UI Update
     func updateUI() {
@@ -91,10 +92,10 @@ class ViewController: UIViewController {
                 imageGalleryView.contentMode = .scaleAspectFit
                 imageGalleryView.clipsToBounds = true
                 imageGalleryView.layer.cornerRadius = 8
-                imageGalleryView.translatesAutoresizingMaskIntoConstraints = false
+                //imageGalleryView.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([
-                    imageGalleryView.widthAnchor.constraint(equalToConstant: 200),
-                    imageGalleryView.heightAnchor.constraint(equalToConstant: 200)
+                   // imageGalleryView.widthAnchor.constraint(equalToConstant: 100),
+                   // imageGalleryView.heightAnchor.constraint(equalToConstant: 100)
                 ])
                 galleryStackView.addArrangedSubview(imageGalleryView)
             }
